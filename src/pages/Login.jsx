@@ -2,27 +2,27 @@ import React from 'react'
 import { useState, useContext } from "react";import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from '../context/auth.context';
+import impala from "../images/junicorn_5__27th_by_juliabeutling_da83pcp-fullview.jpeg";
  
 const API_URL = "http://localhost:5005";
 
 export default function Login() {
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
  
   const navigate = useNavigate();
   const { storeToken, authenticateUser } = useContext(AuthContext);
 
-  const handlePassword = (e) => setPassword(e.target.value);
-  const handleUsername = (e) => setUsername(e.target.value);
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    const requestBody = { username, password };
+    const requestBody = { email, password };
  
     axios.post(`${API_URL}/auth/login`, requestBody)
       .then((response) => {
         console.log('JWT token', response.data.authToken );
+        
         storeToken(response.data.authToken); 
         authenticateUser();       
         navigate('/');                           
@@ -41,11 +41,11 @@ export default function Login() {
         <form action="/login" method="POST" onSubmit={handleLoginSubmit}>
 
         <label for="">
-        <input type="text" name="username" placeholder="Username" value={username} onChange={handleUsername}/>
+        <input type="text" name="username" placeholder="name@email.com" value={email} onChange={(e) => setEmail(e.target.value)}/>
         </label>
 
         <label for="">
-        <input type="password" name="password" placeholder="Password" value={password} onChange={handlePassword}/>
+        <input type="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
          <p className="error"></p>
         </label>
         <button type="submit" className="button">Login</button>
@@ -53,7 +53,7 @@ export default function Login() {
         { errorMessage && <p className="error-message">{errorMessage}</p> }
         </div> 
     <div>
-    <img src="./images/junicorn_5__27th_by_juliabeutling_da83pcp-fullview.jpeg" alt="animal-art" className="signUp-img" id="login-img"/>
+    <img src={impala} alt="animal-art" className="signUp-img"/>
     </div>
 </section>
     </div>

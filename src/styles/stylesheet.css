@@ -1,0 +1,1003 @@
+/* Medium devices (landscape tablets, 768px and up) */
+
+/* @media only screen and (min-width: 768px) { */
+
+button{
+  cursor: pointer;
+}
+
+button[disabled] {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Homepage */
+
+.header {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img{
+ display: none;
+}
+
+.header::before {
+  content: "";
+  background-image: url("../images/Large_pinksheepfull.jpeg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+.header-info {
+  opacity: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-info > p {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+h1 {
+  font-family: "Yeseva One", cursive;
+  letter-spacing: 4px;
+  font-size: 3rem;
+  width: 60%;
+}
+
+.button {
+  text-decoration: none;
+  background-color: rgb(205, 180, 219);
+  color: black;
+  height: 50px;
+  min-width: 180px;
+  border-style: none;
+  font-family: "Outfit", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+}
+.button a {
+  text-decoration: none;
+  color: black;
+  padding: 0 30px;
+}
+.button:hover {
+  color: rgb(216, 226, 220);
+}
+.button a:hover {
+  color: rgb(216, 226, 220);
+  text-decoration: none;
+}
+.button-delete {
+  min-width: 120px;
+}
+.button-add{
+  width: 20%;
+}
+
+/* Navbar */
+
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 1.1rem;
+}
+ul{
+  padding: 0;
+}
+
+.nav-bar ul li {
+  float: left;
+  text-align: center;
+}
+#logo {
+  height: 3.8em;
+  object-fit: contain;
+}
+nav a,
+nav ul {
+  text-decoration: none;
+  list-style-type: none;
+  margin: auto 20px;
+  display: block;
+  color: rgb(157, 129, 137);
+  display: flex;
+  align-items: center;
+}
+
+
+#nav-bar-div li a:hover {
+  color: rgb(216, 226, 220);
+  text-decoration: underline;
+}
+#nav-bar-div li button:hover {
+  color: rgb(216, 226, 220);
+  text-decoration: underline;
+}
+
+
+
+/* //signup page\\ */
+
+.signUp-container {
+  margin-top: 9em;
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.signUp-container input {
+  margin: 10px auto;
+  padding: 10px 15px;
+  padding-right: 40px;
+  width: 70%;
+}
+.signUp-container div h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-family: "Yeseva One", cursive;
+  letter-spacing: 2px;
+}
+.signUp-container button {
+  margin-top: 15px;
+}
+.signUp-container div {
+  width: 50%;
+}
+
+.signUp-container .signUp-img {
+  width: 100%;
+}
+
+
+/* //user-logedin\\ */
+.logout-button {
+  border-style: none;
+  color: rgb(157, 129, 137);
+  background-color: white;
+  font-family: "Outfit", sans-serif;
+  margin: auto 20px;
+  font-size: 1.1rem;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.editForm input::file-selector-button {
+  border-style: none;
+  padding: 1em;
+  border-radius: 10px;
+  margin-right: 1em;
+  background-color: rgba(157, 129, 137, 0.3);
+}
+
+#editPost-buttons {
+  display: flex;
+  flex-direction: row;
+}
+#editPost-buttons button {
+  /* height: 30px; */
+  min-width: 120px;
+  margin-right: 15px;
+}
+.backLink {
+  display: flex;
+  text-decoration: none;
+  color: black;
+  margin-top: 2em;
+  border-style: none !important;
+}
+
+.backLink img {
+  width: 1em;
+}
+
+.backLink:hover {
+  color: rgb(205, 180, 219);
+}
+
+.signUp-container h2 span {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: rgb(157, 129, 137);
+}
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: rgb(157, 129, 137);
+  background-color: white;
+  z-index: 1000;
+  padding-bottom: 7px;
+}
+
+/* Gallery Page */
+.gallery-container {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-container h1 {
+  width: 80%;
+  margin: 30px auto 30px auto;
+}
+.all-posts {
+  display: grid;
+  gap: 20px 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 80%;
+  margin: auto;
+  background-color: rgba(157, 129, 137, 0.3);
+  padding: 20px;
+}
+
+.gallery-img {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  display: block;
+  background-size: cover;
+  /* width: 100%; */
+  background-color: white;
+  object-fit: cover;
+}
+
+.gallery-post {
+  position: relative;
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  background: linear-gradient(
+    180deg,
+    rgba(189, 224, 254, 1) 0%,
+    rgba(162, 210, 255, 1) 2%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.overlay:hover {
+  opacity: 0.6;
+}
+
+.overlay p {
+  color: white;
+  position: relative;
+  left: 20px;
+  bottom: 20px;
+  opacity: 1;
+}
+
+/* Profile Page */
+
+.userProfile {
+  display: flex;
+  width: 80%;
+  margin: 100px auto 30px auto;
+  min-height: 80vh;
+  background-color: rgba(157, 129, 137, 0.3);
+  padding-right: 60px;
+}
+
+.user-container {
+  display: grid;
+  gap: 20px 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px;
+  padding: 20px 40px 20px 60px;
+}
+
+.component-container {
+  width: 60%;
+}
+
+.profile-img {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  display: block;
+  background-size: cover;
+  background-color: white;
+  object-fit: cover;
+}
+.user-post {
+  position: relative;
+}
+.user-information {
+  padding: 20px;
+  background-color: white;
+  height: 160px;
+  width: 30%;
+  margin-top: 20px;
+}
+
+.user-information h5 {
+  margin: 20px 0;
+}
+.user-information p {
+  margin: 10px 0;
+}
+.user-img {
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+}
+.user-details h3 {
+  margin-left: 15px;
+  font-family: "Yeseva One", cursive;
+  font-size: 1.2rem;
+}
+.user-information h5 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+}
+
+.profile-button {
+  min-width: 120px;
+}
+
+/* post-details */
+.postDetails-container{
+  margin-top: 9em;
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+.postDetails-container div {
+  width: 50%;
+}
+
+.postDetails-container input{
+  margin: 10px auto;
+  padding: 10px 15px;
+  padding-right: 40px;
+  width: 70%;
+}
+
+
+
+.titleAndUser {
+  display: flex;
+  align-items: center;
+}
+
+.postImage-div{
+  height: 50vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#postDetails-img {
+  margin-right: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.info-div {
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 3em;
+  padding-top: 1em;
+}
+
+
+.info-div a {
+  color: black;
+  text-decoration: none;
+  border-bottom: black 1px solid;
+}
+
+.info-div a:hover {
+  color: rgb(205, 180, 219);
+  border-bottom: rgb(205, 180, 219) 1px solid;
+}
+
+.info-div p {
+  margin: 0;
+}
+
+.info-div div {
+  width: 100%;
+}
+
+.info-div h3 {
+  font-family: "Yeseva One", cursive;
+  font-size: 1.2rem;
+  margin: 0 0 0 0;
+  width: 50%;
+}
+
+.info-div button {
+  margin-top: 1em;
+}
+.user-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+  margin-right: 25%;
+
+}
+.user-wrapper p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.user-wrapper img {
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5em;
+}
+
+.check{
+  max-width: 100%;
+}
+
+.all-comments {
+  overflow-y: scroll;
+  max-height: 250px;
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+.comment-box {
+  border: rgb(162, 210, 255) solid 2px;
+  border-radius: 5px;
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 20px;
+  width: 300px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-box h4 {
+  margin-bottom: 10px;
+}
+
+.new-comment {
+  margin: 3em 0;
+}
+
+.new-comment textarea {
+  resize: none;
+  width: 340px;
+  padding: 10px 20px 20px 20px;
+  margin: 0;
+}
+
+.new-comment h3 {
+  margin-bottom: 20px;
+}
+
+.delete-icon {
+  width: 20px !important;
+  height: 20px;
+  background-color: rgb(244, 172, 183);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.delete-icon:hover {
+  background-color: rgb(255, 200, 221);
+}
+
+.comment-box button {
+  border-style: none;
+  margin-top: 0;
+  background-color: transparent;
+}
+
+.comment-box form {
+  display: flex;
+  justify-content: center;
+}
+
+/* Modal  */
+
+.deleteContainer{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw !important;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.deleteModal {
+  background-color: white;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 2em 0;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.modalButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.modalButtons button {
+  text-decoration: none;
+  background-color: rgb(205, 180, 219);
+  color: black;
+  height: 50px;
+  min-width: 100px;
+  border-style: none;
+  font-family: "Outfit", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.modalButtons button:hover {
+  color: rgb(216, 226, 220);
+}
+/* Add Post */
+
+.addPost {
+  padding: 20px 40px 20px 60px;
+}
+
+.addPost h2 {
+  font-family: "Yeseva One", cursive;
+}
+
+.addPost input {
+  padding: 0.5em;
+  margin: 1em 0;
+  width: 50%;
+}
+
+.addPost form {
+  display: flex;
+  flex-direction: column;
+}
+
+input::file-selector-button {
+  border-style: none;
+  padding: 1em;
+  border-radius: 10px;
+  margin-right: 1em;
+  background-color: white;
+  cursor: pointer;
+}
+
+input::file-selector-button:hover {
+  background-color: rgb(205, 180, 219);
+  color: white;
+}
+
+.hamburger{
+  display: none;
+}
+/* } */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  /* Navbar */
+  .hamburger{
+    display: inline;
+    margin-right: 1em;
+  }
+  .hamburger img{
+    width: 2em;
+  }
+  .nav-bar-div{
+    display: none;
+  }
+
+  .nav-bar {
+    justify-content: flex-end;
+    max-width: 100vw;
+  }
+  .mobileNav{
+    height: 100vh;
+    margin-top: 5em;
+    font-size: 1.2em;
+  }
+  .mobileNav a{
+    color: black;
+    text-decoration: none;
+  }
+  .mobileNav ul{
+    list-style: none;
+  }
+
+  .mobileNav li{
+    padding: 0.2em 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .logout-button{
+    margin: 0;
+    font-size: 1em;
+    padding: 0;
+  }
+
+  .navIcon{
+    max-width: 1.5em;
+    margin-right: 0.8em;
+  }
+
+  /* HomePage  */
+  h1{
+    font-size: 2rem;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .header{
+    flex-direction: column;
+  }
+  .header-info p{
+    text-align: left;
+    font-size: 1rem;
+  }
+  .header-info{
+    padding: 0 10%;
+  }
+
+  .header::before{
+    display: hidden;
+    background: none;
+  }
+
+  .header img{
+    display: inline;
+    max-width: 100%;
+  }
+
+  .header-img{
+    padding: 10%;
+  }
+
+  /* .button{
+    min-width: none;
+    width: 10%;
+  } */
+
+/* Gallery */
+
+.gallery-container h1 {
+  margin: 0 0.5em 1em 0.5em;
+}
+.gallery-container{
+  margin-top: 5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-posts{
+  grid-template-columns: 1fr 1fr;
+
+}
+.gallery-post {
+  height: 7em;
+}
+.gallery-post img {
+  max-height: 100%;
+}
+
+/* Signup/Login Page */
+
+.signUp-container{
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.signUp-container div{
+  width: 100%;
+}
+
+.signUp-container .signUp-img {
+  height: auto;
+  max-width: 100%;
+  margin-top: 2em;
+}
+
+/* User Profile */
+ .userProfile{
+  flex-direction: column-reverse;
+  margin: 5em 0 0 0;
+  width: 100%;
+  height: auto;
+  padding: 2em 0 3em 0;
+  justify-content: flex-end;
+  align-items: center;
+  
+ }
+
+ .component-container{
+  width: 90%;
+ }
+
+ .user-information{
+  box-sizing: border-box;
+  width: 90%;
+  padding: 0 1em;
+  height: 30vh;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+ /* User Gallery */
+ .user-container{
+  margin: 2em 0;
+  padding: 0;
+  grid-template-rows: 6em 6em;
+  gap: 1em 1em;
+ }
+
+ .profile-img{
+  height: 100%;
+ }
+ /* Add Posts */
+ .addPost{
+  padding: 0 1em;
+ }
+
+ .addPost input{
+  width: 90%;
+ }
+ #editPost-buttons button{
+  width: 50%;
+  min-width: auto;
+ }
+ 
+/* Post Details */
+
+.postDetails-container{
+  flex-direction: column;
+  margin: 5em 0 2em 0;
+}
+.postDetails-container div{
+  width: 100%;
+}
+.postImage-div{
+  align-items: flex-start;
+  height: auto;
+  justify-content: flex-start;
+}
+#postDetails-img{
+  margin-right: 0;
+}
+.info-div{
+  margin: 0; 
+  padding: 2em 0;
+}
+.titleAndUser{
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-wrapper{
+  justify-content: flex-start;
+}
+.new-comment textarea{
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.all-comments{
+  max-width: 100%;
+  max-height: auto;
+}
+
+.comment-box{
+  box-sizing: border-box;
+  width: 100% !important;
+}
+
+.comment-box h4 {
+  margin: 0.5em 0;
+}
+
+.info-div h3{
+width: auto;
+}
+.deleteModal{
+  width: 80% !important;
+}
+.modalButtons{
+  display: flex;
+  justify-content: center;
+}
+
+.modalButtons button{
+  margin: 0 0.5em;
+}
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .all-posts{
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery-img{
+    height: 14em;
+  }
+  .userProfile{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .user-information{
+    width: 80%;
+    padding: 2em;
+  }
+
+  .component-container{
+    width: 90%;
+    padding: 2em 1em;
+  }
+  .user-container{
+    width: 100%; 
+    padding: 0;
+  }
+  .profile-img{
+    height: 8em;
+  }
+
+  .postDetails-container{
+    flex-direction: column;
+    margin: 5em 0;
+    justify-content: center;
+    align-items: center;
+  }
+  #postDetails-img{
+    margin:0;
+  }
+  .postDetails-container div {
+    width: 100%;
+}
+.postImage-div {
+  justify-content: center;
+}
+.info-div{
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box;
+}
+#postDetails-img{
+  width: 100%;
+}
+#editPost-buttons{
+  justify-content: center;
+}
+.deleteModal{
+  width: 80% !important;
+}
+
+.all-comments{
+  max-width: none;
+}
+
+.titleAndUser{
+  justify-content: space-between;
+  align-items: space-between;
+}
+.user-wrapper{
+  margin: 0;
+}
+.signUp-container{
+  flex-direction: column;
+  margin-top: 5em;
+}
+.signUp-container div {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signUp-container label{
+  text-align: center;
+}
+
+.signUp-container input{
+  max-width: 100%;
+}
+
+.signUp-container form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.signUp-container button{
+  width: 20%;
+  align-self: center;
+}
+.signUp-img{
+  margin-top: 2em;
+}
+}
+
